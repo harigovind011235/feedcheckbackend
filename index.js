@@ -37,7 +37,7 @@ app.post("/register", async (req, res) => {
       isadmin,
     });
     if (userDoc) {
-      res.send("Success");
+      res.json({ success: "Success" });
     }
   } catch (e) {
     res.status(400).json(`Cant Create User -> ${e}`);
